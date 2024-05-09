@@ -1,8 +1,6 @@
 import { useState, useRef } from 'react';
 
 
-
-
 function App() {
 
   interface DisplayerPropsTypes {
@@ -31,11 +29,7 @@ function App() {
   const [countdown, setCountdown] = useState(3);
   const [isPlaying, setPlaying] =useState<boolean> (false)
 
-  const handleVercelError = () => {
-   setOnDisplay(true)
- 
-   handleVercelError();
-  }
+  
 
   const handleMatch = () => {
     const isMatch = sequence.length === playerSequence.length && sequence.every((value, index) => value === playerSequence[index])
