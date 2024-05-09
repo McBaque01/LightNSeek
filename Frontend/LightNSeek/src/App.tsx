@@ -18,10 +18,17 @@ function App() {
 
 
   const ParentRef = useRef<HTMLDivElement | null>(null);
-  const [pick, setPick] = useState<boolean>(false);
+  // const [pick, setPick] = useState<boolean>(false);
  
   const [onDisplay, setOnDisplay] = useState<boolean>(false);
   const [time, setTime] = useState(4)
+
+  const handleVercelError = () => {
+   setOnDisplay(true)
+   setTime(4)
+   handleVercelError();
+
+  }
   
   let playerSequence: number[] = [];
   let sequence: number[] = []
@@ -34,6 +41,8 @@ function App() {
       console.log(sequence, "Sequence")
       handleDisplayer({sequence});
   }
+
+  
 
  
 
