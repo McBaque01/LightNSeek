@@ -22,9 +22,8 @@ function App() {
   const [countdown, setCountdown] = useState(3);
   const [isPlaying, setPlaying] = useState<boolean> (false)
   const [isWin, setIsWin] = useState<boolean> (false)
+  const [isCount, setIsCount] = useState<boolean>(false);
 
-
-  
 
   const handleWinDisplay = () =>{
     const parentElement = ParentRef.current;
@@ -79,7 +78,7 @@ function App() {
 
 
    const handleDisplayer =  ({sequence}:DisplayerPropsTypes) => {
-
+    setIsCount(false);
     const parentElement = ParentRef.current;
     const childrens = parentElement ? (parentElement.children as HTMLCollectionOf<HTMLDivElement> | undefined) : undefined;
 
@@ -97,18 +96,17 @@ function App() {
               if (current) {
                   current.style.backgroundColor = "red";
                   setTimeout(() => {
-                      current.style.backgroundColor = ""; // Revert back to the original state
+                      current.style.backgroundColor = ""; 
                     
                       completedTimeouts++; // Increment the counter
                       if (completedTimeouts === sequence.length) {
-                          setPlaying(true); // Call setPlaying(true) when all timeouts are completed
+                          setPlaying(true); 
                       }
                   }, 500);
               }
-          }, i * 600); // Delay each iteration by 1000 milliseconds
+          }, i * 600); 
         }
        
-        
       }, 1000);
   
     
@@ -132,7 +130,7 @@ function App() {
     if (BlinkMe) {
       BlinkMe.style.backgroundColor = "red";
       setTimeout(() => {
-        BlinkMe.style.backgroundColor = ""; // Revert back to the original state
+        BlinkMe.style.backgroundColor = ""; 
          
       }, 200);
   }
@@ -183,6 +181,7 @@ function App() {
 
 
   const handleStart = () => {
+    setIsCount(true);
     setIsWin(true);
 
     setPlaying(false)
@@ -213,23 +212,16 @@ function App() {
     handleDisplayer({ sequence: updatedSequence });
   }
 
- 
-  // console.log(sequence, "Sequencee")
-  // console.log(playerSequence, "PlayerSeq")
-  // console.log(isPlaying, "PLAYING?")
-  
-  // console.log(handleWinDisplay());
+
   
   return (
-    <div className="bg-slate-900 w-full h-screen justify-center items-center flex flex-col">
-       <h1 className=' text-red-100 text-[4em]'>Round:{round}</h1>
-      <h1 className=' text-red-100 text-[4em]'>{countdown === 0 ? 'START' : countdown}</h1>
+    <div className="bg-slate-900 w-full h-screen justify-center items-center flex flex-col relative gap-4">
+      <h1 className=' text-slate-200 text-[4em]'>Round {round}</h1>
      
+      <h1 className={`text-red-500 text-[4em]  ${isCount ? 'block':'hidden'} absolute top-1/2 z-10`} >{countdown === 0 ? 'START' : countdown}</h1>
       
-      <div className='bg-green-400 p-1' 
-      
-
-      >
+      <div className='p-1 relative'>
+       
         <div className="bg-slate-900 w-fit h-fit gap-2 justify-center items-center grid grid-cols-3" ref={ParentRef}>
 
           <div style={{}} className="bg-white w-[7em] h-[7em] relative flex justify-center p-2w">
@@ -323,10 +315,10 @@ function App() {
        
       </div>
 
-      <button className=' text-red-100 text-[1.4em]' onClick={handleStart} 
-      
-      disabled={isWin}
-      >Start</button>
+      <button className={`text-slate-900 text-[1.6em] font-black bg-slate-200 px-8 ${isWin ? "hidden" : "block"}`}
+        onClick={handleStart} 
+        disabled={isWin}
+      >START</button>
     </div>
   );
 }
