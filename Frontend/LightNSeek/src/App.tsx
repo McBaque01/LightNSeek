@@ -232,7 +232,7 @@ function App() {
       >
         <div className="bg-slate-900 w-fit h-fit gap-2 justify-center items-center grid grid-cols-3" ref={ParentRef}>
 
-          <div style={{}} className="bg-white w-[8em] h-[8em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white w-[7em] h-[7em] relative flex justify-center p-2w">
             <button className='h-full w-full'
              disabled={!isPlaying} 
               onClick={() => {handleClick(0)}}
@@ -242,7 +242,7 @@ function App() {
             </button>
           </div>
           
-          <div style={{}} className="bg-white w-[8em] h-[8em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white w-[7em] h-[7em] relative flex justify-center p-2w">
             <button className='h-full w-full'  
               disabled={!isPlaying} 
                onClick={() => {handleClick(1)}}
@@ -251,7 +251,7 @@ function App() {
             </button>
           </div>
 
-          <div style={{}} className="bg-white w-[8em] h-[8em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
             <button className='h-full w-full'
              disabled={!isPlaying} 
               onClick={() => {handleClick(2)}}
@@ -260,7 +260,7 @@ function App() {
             </button>
           </div>
 
-          <div style={{}} className="bg-white w-[8em] h-[8em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
             <button className='h-full w-full'
            disabled={!isPlaying} 
                onClick={() => {handleClick(3)}}
@@ -269,7 +269,7 @@ function App() {
             </button>
           </div>
 
-          <div style={{}} className="bg-white w-[8em] h-[8em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
             <button className='h-full w-full'  
               disabled={!isPlaying}  
                onClick={() => {handleClick(4)}}
@@ -278,7 +278,7 @@ function App() {
             </button>
           </div>
 
-          <div style={{}} className="bg-white w-[8em] h-[8em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
             <button className='h-full w-full'
               disabled={!isPlaying} 
                onClick={() => {handleClick(5)}}
@@ -287,7 +287,7 @@ function App() {
             </button>
           </div>
 
-          <div style={{}} className="bg-white w-[8em] h-[8em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
             <button className='h-full w-full'
               disabled={!isPlaying}  
                onClick={() => {handleClick(6)}}
@@ -296,7 +296,7 @@ function App() {
             </button>
           </div>
 
-          <div style={{}} className="bg-white w-[8em] h-[8em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
             <button className='h-full w-full' 
 
                 disabled={!isPlaying}   
@@ -308,7 +308,7 @@ function App() {
         
 
 
-          <div style={{}} className="bg-white w-[8em] h-[8em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
             <button 
               className='h-full w-full' 
               disabled={!isPlaying}  
@@ -320,7 +320,7 @@ function App() {
 
         </div>
 
-        {/* <div style={{  }} className="bg-white w-[8em] h-[8em]" onClick={()=>{playerSequence.push(8),console.log(playerSequence)}}>8</div> */}
+       
       </div>
 
       <button className=' text-red-100 text-[1.4em]' onClick={handleStart} 
