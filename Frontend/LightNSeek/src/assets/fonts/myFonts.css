@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Joffrey'; /* You can name it whatever you like */
+    src: url('./JoffreyFonts.ttf'); /* Adjust the path to your font file */
+    font-weight: normal;
+    font-style: normal;
+  }
