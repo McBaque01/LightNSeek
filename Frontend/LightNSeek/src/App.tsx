@@ -216,7 +216,7 @@ function App() {
     <div className="bg-slate-900 w-full h-screen justify-center items-center flex flex-col relative gap-4">
       <h1 className=' text-slate-200 text-[4em]'>Round {round}</h1>
      
-      <h1 className={`text-red-500 text-[4em]  ${isCount ? 'block':'hidden'} absolute top-1/2 z-10 font-bold tracking-widest`} >{countdown === 1 ? 'START' : countdown - 1}</h1>
+      <h1 className={`text-[#D75C37] text-[4em]  ${isCount ? 'block':'hidden'} absolute top-1/2 z-10 font-bold tracking-widest`} >{countdown === 1 ? 'START' : countdown - 1}</h1>
       
       <div className='p-1 relative  min-w-fit bg-white'>
        
