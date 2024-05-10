@@ -19,7 +19,7 @@ function App() {
   const [sequence, setSequence] = useState<number[]>([]);
   const [playerSequence, setPlayerSequence] = useState<number[]>([]);
 
-  const [countdown, setCountdown] = useState(3);
+  const [countdown, setCountdown] = useState(4);
   const [isPlaying, setPlaying] = useState<boolean> (false)
   const [isWin, setIsWin] = useState<boolean> (false)
   const [isCount, setIsCount] = useState<boolean>(false);
@@ -48,7 +48,7 @@ function App() {
          });
        }
  
-     },800)
+     },400)
      
    }
 
@@ -72,7 +72,7 @@ function App() {
              child.style.backgroundColor = ""; 
          });
        }
-     },800)
+     },1000)
     
    }
 
@@ -174,10 +174,8 @@ function App() {
       }
     }
 
-    
-
+  
   }
-
 
 
   const handleStart = () => {
@@ -198,9 +196,9 @@ function App() {
       setSequence(updatedSequence);
       handleDisplayer({ sequence: updatedSequence });
 
-    }, 3000);
+    }, 4000);
 
-    setCountdown(3)
+    setCountdown(4)
 
   };
 
@@ -218,95 +216,95 @@ function App() {
     <div className="bg-slate-900 w-full h-screen justify-center items-center flex flex-col relative gap-4">
       <h1 className=' text-slate-200 text-[4em]'>Round {round}</h1>
      
-      <h1 className={`text-red-500 text-[4em]  ${isCount ? 'block':'hidden'} absolute top-1/2 z-10`} >{countdown === 0 ? 'START' : countdown}</h1>
+      <h1 className={`text-red-500 text-[4em]  ${isCount ? 'block':'hidden'} absolute top-1/2 z-10 font-bold tracking-widest`} >{countdown === 1 ? 'START' : countdown - 1}</h1>
       
-      <div className='p-1 relative'>
+      <div className='p-1 relative  min-w-fit bg-white'>
        
-        <div className="bg-slate-900 w-fit h-fit gap-2 justify-center items-center grid grid-cols-3" ref={ParentRef}>
+        <div className="bg-slate-900 min-w-fit h-fit gap-2 justify-center items-center grid grid-cols-3 p-2" ref={ParentRef}>
 
-          <div style={{}} className="bg-white w-[7em] h-[7em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white w-[7em] h-[7em] relative flex justify-center p-2">
             <button className='h-full w-full'
              disabled={!isPlaying} 
               onClick={() => {handleClick(0)}}
              
             >
-              0
+              
             </button>
           </div>
           
-          <div style={{}} className="bg-white w-[7em] h-[7em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white w-[7em] h-[7em] relative flex justify-center">
             <button className='h-full w-full'  
               disabled={!isPlaying} 
                onClick={() => {handleClick(1)}}
             >
-              1
+              
             </button>
           </div>
 
-          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center">
             <button className='h-full w-full'
              disabled={!isPlaying} 
               onClick={() => {handleClick(2)}}
             >
-              2
+              
             </button>
           </div>
 
-          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center">
             <button className='h-full w-full'
            disabled={!isPlaying} 
                onClick={() => {handleClick(3)}}
             >
-              3
+              
             </button>
           </div>
 
-          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center">
             <button className='h-full w-full'  
               disabled={!isPlaying}  
                onClick={() => {handleClick(4)}}
             >
-              4
+              
             </button>
           </div>
 
-          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center">
             <button className='h-full w-full'
               disabled={!isPlaying} 
                onClick={() => {handleClick(5)}}
             >
-              5
+              
             </button>
           </div>
 
-          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center">
             <button className='h-full w-full'
               disabled={!isPlaying}  
                onClick={() => {handleClick(6)}}
             >
-              6
+              
             </button>
           </div>
 
-          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center ">
             <button className='h-full w-full' 
 
                 disabled={!isPlaying}   
                onClick={() => {handleClick(7)}}
             >
-              7
+              
             </button>
           </div>
         
 
 
-          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center p-2w">
+          <div style={{}} className="bg-white  w-[7em] h-[7em] relative flex justify-center">
             <button 
               className='h-full w-full' 
               disabled={!isPlaying}  
               onClick={() => {handleClick(8)}}
             >
-              8
+              
             </button>
           </div>
 
